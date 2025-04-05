@@ -10,52 +10,54 @@ import Team from './Team';
 import FAQ from './FAQ';
 import { Brain, Target, BarChart as ChartBar } from 'lucide-react';
 
-
 const Home = () => {
+  // Function to scroll to different sections of the page
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       {/* Hero Section */}
       <section className="py-20 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        {/* Agency Name (Like OUP Agency Placement) */}
-      
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          
+          {/* Agency Name (Like OUP Agency Placement) */}
+          <h1 className="text-4xl font-bold">Savi Agency</h1>
 
-        {/* Main Value Proposition */}
-        <h2 className="text-5xl font-extrabold mt-4">
-          Max ROI - Lower CAC.
-        </h2>
+          {/* Main Value Proposition */}
+          <h2 className="text-5xl font-extrabold mt-4">
+            Max ROI - Lower CAC.
+          </h2>
 
-        {/* Highlighted Growth Message (Gradient Effect Like OUP Agency) */}
-        <p className="text-4xl font-bold mt-2 bg-clip-text text-transparent 
-            bg-gradient-to-r from-blue-400 to-blue-500">
-          Data-Driven Growth
-        </p>
+          {/* Highlighted Growth Message (Gradient Effect Like OUP Agency) */}
+          <p className="text-4xl font-bold mt-2 bg-clip-text text-transparent 
+              bg-gradient-to-r from-blue-400 to-blue-500">
+            Data-Driven Growth
+          </p>
 
-        {/* Supporting Text */}
-        <p className="text-lg text-gray-300 max-w-3xl mx-auto mt-6">
-        Your growth solution is here!
-        We help brands like yours acquire customers profitably and maximize retention & AOV with data-driven  Meta Ads & high-converting email marketing. Our Guarantee: We will at least 3x your monthly recurring revenue or you don’t pay.
-No fluff, just results.
-Let’s build a scalable system for predictable, profitable growth! 
-        </p>
+          {/* Supporting Text */}
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mt-6">
+            Your growth solution is here! We help brands like yours acquire customers profitably and maximize retention & AOV with data-driven Meta Ads & high-converting email marketing. Our Guarantee: We will at least 3x your monthly recurring revenue or you don’t pay. No fluff, just results. Let’s build a scalable system for predictable, profitable growth!
+          </p>
 
-        {/* CTA Button (Matching OUP Agency Button Placement) */}
-        <a 
+          {/* CTA Button (Matching OUP Agency Button Placement) */}
+          <a 
             href="/book-call"
             className="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition duration-300 mt-7"
           >
             Book Your Free Demo Call
           </a>
         
-      </div>
-    </section>
-
+        </div>
+      </section>
 
       {/* Stats Section */}
+      {/* (You can insert the Stats section here if needed) */}
 
-
-      
       {/* Other Sections */}
       <section id="about" className="py-10">
         <About />
