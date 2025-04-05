@@ -45,12 +45,12 @@ const Home = () => {
           </p>
 
           {/* CTA Button (Matching OUP Agency Button Placement) */}
-          <a 
-            href="/book-call"
-            className="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition duration-300 mt-7"
-          >
-            Book Your Free Demo Call
-          </a>
+          <Link 
+                to="/book-call" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300"
+              >
+                Book a Demo
+              </Link>
         
         </div>
       </section>
