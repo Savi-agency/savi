@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-2xl font-bold ml-1 text-white">Agency</span>
             </Link>
             <p className="mt-4 text-gray-400">
-              Transforming fitness marketing with AI-powered solutions.
+              Transforming skincare marketing with AI-powered solutions.
             </p>
           </div>
           
@@ -31,9 +31,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>contact@saviagency.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Marketing Street</li>
-              <li>New York, NY 10001</li>
+              <li>+447771444978</li>
+              <li>Marketing Street</li>
+              <li>London, UK</li>
             </ul>
           </div>
           

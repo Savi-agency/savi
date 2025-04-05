@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../images/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
+  // Function to scroll to different sections of the page
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -13,6 +15,9 @@ const Navbar = () => {
     }
     setIsOpen(false);
   };
+
+  // Check if the current route is '/book-call' to alter the navbar content
+  const isBookCallPage = location.pathname === '/book-call';
 
   return (
     <nav className="fixed w-full bg-black/90 backdrop-blur-sm z-50 border-b border-white/10">
@@ -25,19 +30,21 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('about')} className="text-white hover:text-blue-400 transition">About</button>
-            <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue-400 transition">Services</button>
-            <button onClick={() => scrollToSection('process')} className="text-white hover:text-blue-400 transition">Process</button>
-            <button onClick={() => scrollToSection('team')} className="text-white hover:text-blue-400 transition">Team</button>
-            <button onClick={() => scrollToSection('faq')} className="text-white hover:text-blue-400 transition">FAQ</button>
-            <Link 
-              to="/book-call" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300"
-            >
-              Book a Demo
-            </Link>
-          </div>
+          {!isBookCallPage && (
+            <div className="hidden md:flex items-center space-x-8">
+              <button onClick={() => scrollToSection('about')} className="text-white hover:text-blue-400 transition">About</button>
+              <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue-400 transition">Services</button>
+              <button onClick={() => scrollToSection('process')} className="text-white hover:text-blue-400 transition">Process</button>
+              <button onClick={() => scrollToSection('team')} className="text-white hover:text-blue-400 transition">Team</button>
+              <button onClick={() => scrollToSection('faq')} className="text-white hover:text-blue-400 transition">FAQ</button>
+              <Link 
+                to="/book-call" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300"
+              >
+                Book a Demo
+              </Link>
+            </div>
+          )}
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -51,7 +58,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
+        {isOpen && !isBookCallPage && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <button 
