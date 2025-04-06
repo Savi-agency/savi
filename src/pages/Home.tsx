@@ -40,17 +40,17 @@ const Home = () => {
           </p>
 
           {/* Supporting Text */}
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto mt-6">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mt-6 mb-6">
             Your growth solution is here! We help brands like yours acquire customers profitably and maximize retention & AOV with data-driven Meta Ads & high-converting email marketing. Our Guarantee: We will at least 3x your monthly recurring revenue or you don’t pay. No fluff, just results. Let’s build a scalable system for predictable, profitable growth!
           </p>
 
           {/* CTA Button (Matching OUP Agency Button Placement) */}
-          <Link 
-                to="/book-call" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300"
-              >
-                Book a Demo
-              </Link>
+          <Link
+  to="/book-call"
+  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg rounded-full transition duration-300 mt-6"
+>
+  Book a Demo
+</Link>
         
         </div>
       </section>

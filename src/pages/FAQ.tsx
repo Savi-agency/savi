@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
@@ -102,12 +103,12 @@ const FAQ = () => {
   <p className="text-gray-400 mb-6 text-lg max-w-2xl mx-auto">
     Discover how our AI-powered strategies and performance marketing systems can unlock new levels of growth for your skincare brand. Let’s build a scalable, profitable marketing engine—together.
   </p>
-  <a
-    href="/book-call"
+  <Link
+    to="/book-call"
     className="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition duration-300"
   >
-    Book Your Free Strategy Call
-  </a>
+    Book Your Demo Call
+  </Link>
 </motion.div>
       </div>
     </div>

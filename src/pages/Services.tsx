@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Target, TrendingUp, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -138,12 +139,12 @@ const Services = () => {
             
           })}
                 <div className="md:col-span-3 flex justify-center mt-10">
-    <a
-      href="/book-call"
+    <Link
+      to="/book-call"
       className="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition duration-300"
     >
       Partner With Us
-    </a>
+    </Link>
   </div>
         </div>
       </div>

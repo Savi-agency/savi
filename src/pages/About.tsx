@@ -62,13 +62,15 @@ const About = () => {
 
             {/* CTA Button */}
             <div className="mt-9">
-              <a
-                href="/book-call"
-                className="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition duration-300"
-              >
-               Partner With Us
-              </a>
+            <Link
+  to="/book-call"
+  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg rounded-full transition duration-300 mt-6"
+>
+  Partner With Us
+</Link>
             </div>
+   
+
           </motion.div>
         </div>
       </div>
