@@ -26,11 +26,11 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           
           {/* Agency Name (Like OUP Agency Placement) */}
-          <h1 className="text-4xl font-bold">Savi Agency</h1>
+      
 
           {/* Main Value Proposition */}
           <h2 className="text-5xl font-extrabold mt-4">
-            Max ROI - Lower CAC.
+          Maximize returns - Cut acquisition costs
           </h2>
 
           {/* Highlighted Growth Message (Gradient Effect Like OUP Agency) */}
